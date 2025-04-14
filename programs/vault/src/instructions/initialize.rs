@@ -9,7 +9,8 @@ in case of multiple vaults support for a single user, we can store the state suc
 vault_type etc. this account can be a pda derived from users address and a seed.
 - we need a vault account to store the sol that we are transferring and depositing. this
 can be a system account derived from vault_state account and another seed.
-- system_program account
+- system_program account required because the init constraint invokes 
+the System Program to create the account.
 
 something to think of => why can't we just derive the vault account from user's key
 and store both the state such as bump and also hold the lamports of the user in the same

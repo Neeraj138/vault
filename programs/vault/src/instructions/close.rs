@@ -23,6 +23,8 @@ pub struct  CloseVault<'info> {
     pub vault: SystemAccount<'info>,
 
     pub system_program: Program<'info, System>,
+    // System Program is required here because because the CPI invokes the System Program for
+    // transfer of sol
 }
 
 impl<'info> CloseVault<'info> {
